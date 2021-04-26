@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "private": false,
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
-      "type": "git",
-      "url": "URL_OF_YOUR_REPOSITORY"
+    "type": "git",
+    "url": "URL_OF_YOUR_REPOSITORY"
   },
   "dependencies": {
+    "@manualengineering/react-slippin-carousel": "^0.1.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "react-placeholder-image": "^0.1.8",
     "react-test-renderer": "^17.0.2",
     "web-vitals": "^1.1.1"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -68,6 +68,9 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
   }
 }
