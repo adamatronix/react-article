@@ -1,0 +1,15 @@
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px 40px;
+  border-radius: 2px;
+  border: 1px solid black;
+
+  &--secondary {
+    background-color: black;
+    color: white;
+  }
+}
