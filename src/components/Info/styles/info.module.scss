@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 0 0 40px;
+}
+
+.title,
+.role,
+.type,
+.date {
+  color: #111;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.33;
+  margin: 0 0 4px;
+}
+
+.role {
+  opacity: 0.5;
+}
+
+.type {
+  opacity: 0.35;
+}
+
+.date {
+  opacity: 0.2;
+}
