@@ -1,13 +1,14 @@
 import React from 'react';
+import HtmlParser from '../HtmlParser/HtmlParser';
 
 const TextBlock = (props) => {
 
   const { content } = props;
 
   return (
-    <div>
+    <HtmlParser>
       { content }
-    </div>
+    </HtmlParser>
   );
 }
 

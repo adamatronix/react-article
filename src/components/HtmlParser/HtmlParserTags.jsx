@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import "./styles/post-tag.scss";
+import styles from "./styles/htmlparser.module.scss";
 
 const Paragraph = props => {
     const { children } = props;
-    const classesMain = classNames("post-tag__p");
+    const classesMain = classNames(styles.p);
     return (
         <p className={classesMain} {...props}>{children}</p>
     )

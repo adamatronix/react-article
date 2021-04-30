@@ -10,7 +10,7 @@ export const Default = () => {
   return (
     <>
       <TextBlock
-        content="Text"
+        content="<p>This is test markup from a rich text editor.</p><p>It's content is parsed by the HtmlParser component.</p>"
        />
     </>
   );
