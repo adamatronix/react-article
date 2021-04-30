@@ -1,0 +1,16 @@
+.inline-anchor {
+    &__wrapper {
+        background: #e6e6e6;
+        border: 1px solid #e6e6e6;
+        color: inherit;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: normal;
+        padding: 3px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background: transparent;
+        }
+    }
+}
