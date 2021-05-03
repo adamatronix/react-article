@@ -1,15 +1,23 @@
 import React from 'react';
-import { Body as CopyBody } from './CopySection';
+import { Body as CopyBody, CopySection } from './CopySection';
 
 export default {
   title: 'CopySection',
 };
 
 
-export const Default = () => {
+export const Body = () => {
   return (
     <>
       <CopyBody/>
+    </>
+  );
+}
+
+export const Section = () => {
+  return (
+    <>
+      <CopySection/>
     </>
   );
 }
