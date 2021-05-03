@@ -11,7 +11,7 @@ const CopyIntro = (props) => {
   const { info, text, cta} = props;
 
   return (
-    <Section className={styles.wrapper}>
+    <Section className={styles.wrapper} contain>
       <Grid columnGap='30px' columns="repeat(12, 1fr)">
         <Grid.Item column='1 / span 6'>
           { info ? <Info 
