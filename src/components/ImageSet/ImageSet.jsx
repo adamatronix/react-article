@@ -7,12 +7,12 @@ import styles from './styles/image-set.module.scss';
 const Image50 = (props) => {
   const { src, alt, caption } = props;
   return (
-    <Section>
-      <div className={styles['image-wrapper']}>
-        <div className={styles['image-50']}>
+    <Section contain>
+      <Grid columnGap='30px' columns="repeat(12, 1fr)">
+        <Grid.Item column='4 / span 6'>
           <ImageBlock src={src} caption={caption} alt={alt}/>
-        </div>
-      </div>
+        </Grid.Item>
+      </Grid>
     </Section>
   )
 }
@@ -21,11 +21,11 @@ const Image90 = (props) => {
   const { src, alt, caption } = props;
   return (
     <Section>
-      <div className={styles['image-wrapper']}>
-        <div className={styles['image-100']}>
+      <Grid columnGap='30px' columns="repeat(12, 1fr)">
+        <Grid.Item column='1 / span 12'>
           <ImageBlock src={src} caption={caption} alt={alt}/>
-          </div>
-      </div>
+        </Grid.Item>
+      </Grid>
     </Section>
   )
 }
@@ -34,11 +34,11 @@ const Image100 = (props) => {
   const { src, alt, caption } = props;
   return (
     <Section full>
-      <div className={styles['image-wrapper']}>
-        <div className={styles['image-100']}>
+      <Grid columnGap='30px' columns="repeat(12, 1fr)">
+        <Grid.Item column='1 / span 12'>
           <ImageBlock src={src} caption={caption} alt={alt}/>
-          </div>
-      </div>
+        </Grid.Item>
+      </Grid>
     </Section>
   )
 }
