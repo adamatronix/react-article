@@ -4,13 +4,14 @@ import Section from '../Section/Section';
 import Info from '../Info/Info';
 import TextBlock from '../TextBlock/TextBlock';
 import { CtaPrimary } from '../Cta/Cta';
+import styles from './styles/copy-intro.module.scss';
 
 const CopyIntro = (props) => {
 
   const { info, text, cta} = props;
 
   return (
-    <Section>
+    <Section className={styles.wrapper}>
       <Grid columnGap='30px' columns="repeat(12, 1fr)">
         <Grid.Item column='1 / span 6'>
           { info ? <Info 

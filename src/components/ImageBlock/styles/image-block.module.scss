@@ -1,3 +1,5 @@
+@import '../../../styles/framework';
+
 .image {
   display: block;
   position: relative;
@@ -5,6 +7,7 @@
 }
 
 .caption {
-  font-size: 12px;
+  @include fontstack();
+  @include type('caption');
   margin: 10px 0;
 }
