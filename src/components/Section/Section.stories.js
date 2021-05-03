@@ -31,3 +31,13 @@ export const Small = () => {
     </>
   );
 }
+
+export const Contain = () => {
+  return (
+    <>
+      <Section contain>
+        <div style={placeholder}></div>
+      </Section>
+    </>
+  );
+}
