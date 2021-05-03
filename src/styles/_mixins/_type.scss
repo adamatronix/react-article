@@ -1,0 +1,57 @@
+$types: (
+    'heading1'
+    (
+      'font-weight': "normal",
+      'font-size': '40px',
+      'line-height': '48px'
+    ),
+    'heading2'
+    (
+      'font-weight': "normal",
+      'font-size': '30px',
+      'line-height': '36px'
+    ),
+    'heading3'
+    (
+      'font-weight': "normal",
+      'font-size': '20px',
+      'line-height': '24px'
+    ),
+    'subtitle'
+    (
+      'font-weight': "normal",
+      'font-size': '16px',
+      'line-height': '22px'
+    ),
+    'body'
+    (
+      'font-weight': "normal",
+      'font-size': '14px',
+      'line-height': '18px'
+    ),
+    'caption'
+    (
+        'font-weight': 'normal',
+        'font-size': '12px',
+        'line-height': '16px'
+    ),
+    'overline'
+    (
+        'font-weight': 'normal',
+        'font-size': '10px',
+        'line-height': '14px'
+    )
+);
+
+@mixin type($style) {
+    @each $type, $properties in $types {
+
+        @if $style == $type {
+            @each $property, $value in $properties {
+                #{$property}:#{$value}; 
+            }
+        }
+        
+    }
+
+}
