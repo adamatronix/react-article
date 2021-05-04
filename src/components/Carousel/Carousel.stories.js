@@ -9,8 +9,7 @@ export default {
 };
 
 const placeholder = {
-  width: '300px',
-  height: '300px',
+  width: '100%',
   background: '#ccc',
   marginLeft: '10px'
 }
@@ -20,12 +19,12 @@ export const Default = () => {
   
   return (
     <>
-      <Carousel>
+      <Carousel itemSize="55%">
         { imageArray.map((item, index) => {
           const image = generatePhotoPlaceholderURL(300, 300);
             return (
               <div style={placeholder}>
-                <img src={image}  style={{pointerEvents: 'none'}} />
+                <img src={image}  style={{pointerEvents: 'none', width: '100%', display: 'block'}} />
               </div>
             )
         })}
