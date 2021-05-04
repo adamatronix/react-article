@@ -3,11 +3,11 @@ import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 
 const Carousel = (props) => {
 
-  const { children } = props;
+  const { children, ...rest } = props;
 
   return (
     <>
-      <SlippinCarousel>
+      <SlippinCarousel {...rest}>
         {children}
       </SlippinCarousel>
     </>
