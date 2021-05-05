@@ -22,6 +22,15 @@ export const Default = () => {
 
 }
 
+export const SrcNull= () => {
+  return (
+    <>
+      <ImageBlock />
+    </>
+  );
+
+}
+
 export const Caption = () => {
   const image = generatePhotoPlaceholderURL(1000, 500);
   return (

@@ -4,11 +4,11 @@ import styles from './styles/image-block.module.scss';
 
 const ImageBlock = (props) => {
 
-  const { placeholder, src, alt, caption } = props;
+  const { placeholder, src, alt, caption, style, className } = props;
   return (
-    <div>
-      { placeholder ? <LazyBlurImage placeholder={placeholder} src={src} alt={alt}/> :
-      <img className={styles.image} src={src} alt={alt} /> }
+    <div style={style} className={className}>
+      { placeholder && src ? <LazyBlurImage placeholder={placeholder} src={src} alt={alt}/> : src ?
+      <img className={styles.image} src={src} alt={alt} /> : <div className={styles.box}></div> }
       { caption ? <div className={styles.caption}>{caption}</div> : ''}
     </div>
   )
