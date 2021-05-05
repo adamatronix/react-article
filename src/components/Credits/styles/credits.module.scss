@@ -1,0 +1,37 @@
+@import '../../../styles/framework';
+
+.wrapper {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.line {
+  &:not(:last-child) {
+      margin: 0 0 16px;
+  }
+  display: flex;
+
+  &-title,
+  &-name {
+    @include fontstack();
+    @include type('body');
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  &-title {
+    opacity: 0.4;
+    text-align: right;
+  }
+
+  &-name {
+    text-align: left;
+  }
+}
