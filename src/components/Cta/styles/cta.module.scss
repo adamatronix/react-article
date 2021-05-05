@@ -1,10 +1,15 @@
+@import '../../../styles/framework';
+
 .button {
+  @include fontstack();
+  @include type('subtitle');
   border: none;
+  display: flex;
   outline: none;
   background: none;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 10px 40px;
+  padding: 13px 40px;
   border-radius: 2px;
   border: 1px solid black;
 
@@ -12,4 +17,12 @@
     background-color: black;
     color: white;
   }
+}
+
+.primary-arrow {
+  fill: black;
+}
+
+.secondary-arrow {
+  fill: white;
 }

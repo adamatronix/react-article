@@ -20,7 +20,7 @@ export const Secondary = () => {
   return (
     <>
       <CtaSecondary>
-        Github
+      View Live
       </CtaSecondary>
     </>
   );
