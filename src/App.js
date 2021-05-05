@@ -43,9 +43,9 @@ function App() {
             <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"/>
       <Image90 src={devLandscape} placeholder={{
         src: devLandscapeBlur,
-        width: 106,
-        height: 53
-      }} alt="test"/>
+        width: 1368,
+        height: 600
+      }} alt="test" caption="1."/>
     </>
   );
 }
