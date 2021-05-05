@@ -14,6 +14,10 @@ import devMaskImage from './assets/20201219_DevHynes_00103.jpeg';
 import devMaskImageBlur from './assets/20201219_DevHynes_00103_blur.jpg';
 import devGardenImage from './assets/Blood-Orange-billboard.jpeg';
 import devGardenImageBlur from './assets/Blood-Orange-billboard-blur.jpg';
+import devDogImage from './assets/20201219_DevHynes_00215.jpeg';
+import devDogImageBlur from './assets/20201219_DevHynes_00215_blur.jpg';
+import devDogImageTwo from './assets/20201219_DevHynes_00216.jpeg';
+import devDogImageTwoBlur from './assets/20201219_DevHynes_00216_blur.jpg';
 
 import './fonts/fonts.scss';
 import './App.css';
@@ -40,10 +44,16 @@ function App() {
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi laoreet, nisl a eleifend luctus, nisl tellus pulvinar ipsum, sit amet interdum neque nibh quis sem. Maecenas consectetur justo quis turpis efficitur, ut varius lacus aliquet. Cras scelerisque lacinia nunc, accumsan condimentum sapien. Ut placerat magna interdum, varius enim et, imperdiet libero. Quisque accumsan tincidunt interdum. Curabitur ut urna vitae libero gravida feugiat. Ut pulvinar velit in ligula volutpat, tincidunt malesuada nisi euismod. Aenean pellentesque, odio sit amet euismod molestie, diam lacus facilisis ligula, et dapibus neque ipsum in justo. Nam ornare nisl quis risus dictum lobortis. Aenean a massa gravida, efficitur orci sit amet, interdum odio. Sed tristique eros justo, sit amet ultricies velit viverra eget. Nulla aliquet ex ante, vel egestas massa rhoncus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi nulla neque, eleifend eu tristique quis, fringilla non dui. Pellentesque rhoncus nibh et dolor posuere pharetra. In in enim faucibus, hendrerit elit nec, fermentum purus."
       />
       <Carousel itemSize="55%">
-        <ImageBlock style={{marginLeft:'30px'}} caption="1."/>
-        <ImageBlock style={{marginLeft:'30px'}} caption="2."/>
-        <ImageBlock style={{marginLeft:'30px'}} caption="3."/>
-        <ImageBlock style={{marginLeft:'30px'}} caption="4."/>
+        <ImageBlock src={devDogImage} placeholder={{
+          src: devDogImageBlur,
+          width: 1000,
+          height: 1499
+        }} style={{marginLeft:'30px'}} caption="1."/>
+        <ImageBlock src={devDogImageTwo} placeholder={{
+          src: devDogImageTwoBlur,
+          width: 1000,
+          height: 1499
+        }} style={{marginLeft:'30px'}} caption="2."/>
       </Carousel>
       <CopyBody data="<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
             <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"/>

@@ -7,7 +7,7 @@ const ImageBlock = (props) => {
   const { placeholder, src, alt, caption, style, className } = props;
   return (
     <div style={style} className={className}>
-      { placeholder && src ? <LazyBlurImage placeholder={placeholder} src={src} alt={alt}/> : src ?
+      { placeholder && src ? <LazyBlurImage className={styles.lazyimage} placeholder={placeholder} src={src} alt={alt}/> : src ?
       <img className={styles.image} src={src} alt={alt} /> : <div className={styles.box}></div> }
       { caption ? <div className={styles.caption}>{caption}</div> : ''}
     </div>
