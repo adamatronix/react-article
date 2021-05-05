@@ -6,6 +6,13 @@
   width: 100%;
 }
 
+.box {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #C4C4C4;
+}
+
 .caption {
   @include fontstack();
   @include type('caption');
