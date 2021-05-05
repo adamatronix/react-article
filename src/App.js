@@ -8,6 +8,8 @@ import featuredImage from './assets/20201219_DevHynes_00136.jpeg';
 import featuredImageBlur from './assets/20201219_DevHynes_00136_blur.jpg';
 import devLandscape from './assets/Blood Orange - Press Photo 3 -  Nick Harwood - 300dpi.jpeg';
 import devLandscapeBlur from './assets/Blood Orange - Press Photo 3 -  Nick Harwood - 300dpi - blur.jpg';
+import devMaskImage from './assets/20201219_DevHynes_00103.jpeg';
+import devMaskImageBlur from './assets/20201219_DevHynes_00103_blur.jpg';
 
 import './fonts/fonts.scss';
 import './App.css';
@@ -50,6 +52,11 @@ function App() {
         "<p>Styleguide</p>",
         "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p><p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p><p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"
       ]}/>
+      <Image50 src={devMaskImage} placeholder={{
+        src: devMaskImageBlur,
+        width: 1000,
+        height: 1499
+      }} alt="test" caption="Maecenas sed diam eget risus varius"/>
     </>
   );
 }
