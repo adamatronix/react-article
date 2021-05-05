@@ -10,6 +10,8 @@ import devLandscape from './assets/Blood Orange - Press Photo 3 -  Nick Harwood 
 import devLandscapeBlur from './assets/Blood Orange - Press Photo 3 -  Nick Harwood - 300dpi - blur.jpg';
 import devMaskImage from './assets/20201219_DevHynes_00103.jpeg';
 import devMaskImageBlur from './assets/20201219_DevHynes_00103_blur.jpg';
+import devGardenImage from './assets/Blood-Orange-billboard.jpeg';
+import devGardenImageBlur from './assets/Blood-Orange-billboard-blur.jpg';
 
 import './fonts/fonts.scss';
 import './App.css';
@@ -57,6 +59,15 @@ function App() {
         width: 1000,
         height: 1499
       }} alt="test" caption="Maecenas sed diam eget risus varius"/>
+      <CopyBody data="<p>Development</p><br><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+<p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+<p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"/>
+      <Image100 src={devGardenImage} placeholder={{
+        src: devGardenImageBlur,
+        width: 1240,
+        height: 700
+      }} alt="test"/>
     </>
   );
 }
