@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import minariImage from './assets/minari.jpg.2000x2000_q90.jpg';
+import minariImageBlur from './assets/minari.jpg.2000x2000_q90_blur.jpg';
 import { generatePhotoPlaceholderURL } from 'react-placeholder-image';
 
 
@@ -16,7 +17,7 @@ export const Default = () => {
   
   return (
     <>
-      <Hero src={minariImage}/>
+      <Hero src={minariImage} placeholder={minariImageBlur} />
     </>
   );
 
