@@ -1,0 +1,21 @@
+@import '../../../styles/framework';
+
+.wrapper {
+  @include fontstack();
+  @include type('caption');
+  display: inline-flex;
+  padding: 3px 8px;
+  backdrop-filter: blur(20px);
+  border-radius: 2px;
+}
+
+.dark {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+}
+
+.dark-outline {
+  color: rgba(255, 255, 255, 0.5);;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
