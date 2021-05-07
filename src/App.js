@@ -48,12 +48,12 @@ function App() {
           src: devDogImageBlur,
           width: 1000,
           height: 1499
-        }} style={{marginLeft:'30px'}} caption="1."/>
+        }} caption="1."/>
         <ImageBlock src={devDogImageTwo} placeholder={{
           src: devDogImageTwoBlur,
           width: 1000,
           height: 1499
-        }} style={{marginLeft:'30px'}} caption="2."/>
+        }} caption="2."/>
       </Carousel>
       <CopyBody data="<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
             <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"/>
