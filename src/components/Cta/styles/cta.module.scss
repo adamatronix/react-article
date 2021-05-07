@@ -12,10 +12,16 @@
   padding: 13px 40px;
   border-radius: 2px;
   border: 1px solid black;
+  justify-content: center;
+  width: 100%;
 
   &--secondary {
     background-color: black;
     color: white;
+  }
+
+  &--desktop {
+    width: auto;
   }
 }
 
