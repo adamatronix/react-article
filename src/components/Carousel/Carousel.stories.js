@@ -11,7 +11,6 @@ export default {
 const placeholder = {
   width: '100%',
   background: '#ccc',
-  marginLeft: '10px'
 }
 
 const imageArray = new Array(10).fill();
