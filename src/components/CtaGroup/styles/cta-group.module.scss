@@ -1,8 +1,21 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &--desktop {
+    flex-direction: row;
+  }
 }
 
 .button-wrapper {
-  margin: 0 15px;
+
+  &:not(:last-child) {
+    margin: 0 0 15px;
+  }
+
+  &--desktop {
+    margin: 0 15px;
+  }
 }
