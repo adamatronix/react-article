@@ -1,5 +1,5 @@
 {
-  "name": "react-npm-boilerplate",
+  "name": "@manualengineering/react-article",
   "version": "0.1.0",
   "main": "dist/index.js",
   "private": false,
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/adamatronix/react-article"
   },
   "dependencies": {
     "@manualengineering/react-lazyblur": "^0.1.7",
