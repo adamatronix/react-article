@@ -15,8 +15,6 @@ const CtaPrimary = (props) => {
   )
 }
 
-export { CtaPrimary };
-
 const CtaSecondary = (props) => {
   const { children } = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
@@ -28,4 +26,7 @@ const CtaSecondary = (props) => {
   )
 }
 
-export { CtaSecondary };
+export { 
+  CtaPrimary,
+  CtaSecondary 
+};
