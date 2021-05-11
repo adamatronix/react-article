@@ -1,7 +1,8 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import cx from 'classnames/bind';
-import { CtaPrimary, CtaSecondary } from '../Cta/Cta';
+import CtaPrimary from '../Cta/CtaPrimary';
+import CtaSecondary from '../Cta/CtaSecondary';
 import Section from '../Section/Section';
 import styles from './styles/cta-group.module.scss';
 
