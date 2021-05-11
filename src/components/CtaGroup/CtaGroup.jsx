@@ -23,7 +23,7 @@ const CtaGroup = (props) => {
         </a>
       </div> : ''}
 
-      <Test />
+      <Test>What</Test>
     </Section>
   )
 }
