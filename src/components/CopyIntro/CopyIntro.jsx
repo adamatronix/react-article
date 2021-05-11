@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import Section from '../Section/Section';
 import Info from '../Info/Info';
 import TextBlock from '../TextBlock/TextBlock';
-import { CtaPrimary } from '../Cta/Cta';
+import CtaPrimary  from '../Cta/CtaPrimary';
 import styles from './styles/copy-intro.module.scss';
 
 const CopyIntro = (props) => {

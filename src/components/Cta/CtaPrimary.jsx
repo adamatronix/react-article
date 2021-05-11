@@ -15,18 +15,4 @@ const CtaPrimary = (props) => {
   )
 }
 
-const CtaSecondary = (props) => {
-  const { children } = props;
-  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
-  return (
-    <button className={cx(styles.button, styles['button--secondary'], {[styles['button--desktop']]: isDesktop})}>
-      { children }
-      <ArrowIcon className={styles['secondary-arrow']}/>
-    </button>
-  )
-}
-
-export { 
-  CtaPrimary,
-  CtaSecondary 
-};
+export default CtaPrimary;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { CtaPrimary, CtaSecondary } from './Cta';
+import CtaPrimary from './CtaPrimary';
+import CtaSecondary from './CtaSecondary';
 
 export default {
   title: 'Cta',
