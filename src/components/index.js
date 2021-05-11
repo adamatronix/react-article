@@ -2,7 +2,6 @@ import Carousel from './Carousel/Carousel';
 import CopyIntro from './CopyIntro/CopyIntro';
 import  { Body as CopyBody, CopySection } from './CopySection/CopySection';
 import Credits from './Credits/Credits';
-import { CtaPrimary, CtaSecondary } from './Cta/Cta';
 import CtaGroup from './CtaGroup/CtaGroup';
 import Hero from './Hero/Hero';
 import HtmlParser from './HtmlParser/HtmlParser';
@@ -17,8 +16,6 @@ export {
     CopyBody,
     CopySection,
     Credits,
-    CtaPrimary,
-    CtaSecondary,
     CtaGroup,
     Hero,
     HtmlParser,
