@@ -3,7 +3,6 @@ import { useMediaQuery } from 'react-responsive';
 import cx from 'classnames/bind';
 import CtaPrimary from '../Cta/CtaPrimary';
 import CtaSecondary from '../Cta/CtaSecondary';
-import Test from '../Test/Test';
 import Section from '../Section/Section';
 import styles from './styles/cta-group.module.scss';
 
@@ -22,8 +21,6 @@ const CtaGroup = (props) => {
           <CtaSecondary>{secondary.label}</CtaSecondary>
         </a>
       </div> : ''}
-
-      <Test>What</Test>
     </Section>
   )
 }
