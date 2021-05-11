@@ -9,7 +9,10 @@ export default {
 export const Default = () => {
   return (
     <>
-      <CtaGroup></CtaGroup>
+      <CtaGroup
+        primary={{ href:'#', label: 'GitHub' }}
+        secondary={{ href:'#', label: 'View Live'}}
+      />
     </>
   );
 }

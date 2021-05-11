@@ -10,12 +10,16 @@ const CtaGroup = (props) => {
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   return (
     <Section className={cx(styles.wrapper, { [styles['wrapper--desktop']]: isDesktop })} contain small>
-      <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
-        <CtaPrimary>GitHub</CtaPrimary>
-      </div>
-      <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
-        <CtaSecondary>View Live</CtaSecondary>
-      </div>
+      { primary ? <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
+        <a href={primary.href} target="_blank">
+          <CtaPrimary>{ primary.label }</CtaPrimary>
+        </a>
+      </div> : ''}
+      { secondary ? <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
+        <a href={secondary.href} target="_blank">
+          <CtaSecondary>{secondary.label}</CtaSecondary>
+        </a>
+      </div> : ''}
     </Section>
   )
 }
