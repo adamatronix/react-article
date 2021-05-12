@@ -1,6 +1,6 @@
 {
   "name": "@manualengineering/react-article",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "private": false,
   "files": [
@@ -12,7 +12,7 @@
     "url": "https://github.com/adamatronix/react-article"
   },
   "dependencies": {
-    "@manualengineering/react-lazyblur": "^0.1.7",
+    "@manualengineering/react-lazyblur": "^0.1.8",
     "@manualengineering/react-slippin-carousel": "^0.1.2",
     "@react-css/grid": "^1.4.3",
     "@testing-library/jest-dom": "^5.12.0",
