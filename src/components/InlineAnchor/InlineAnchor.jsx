@@ -4,7 +4,7 @@ import './styles/inline-anchor.scss';
 
 const InlineAnchor = props => {
     const { className, children } = props;
-    var classesMain = classNames("inline-anchor__wrapper", className);
+    var classesMain = classNames("inlineAnchorWrapper", className);
 
 
 
