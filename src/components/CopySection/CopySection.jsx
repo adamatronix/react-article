@@ -29,7 +29,7 @@ const CopySection = (props) => {
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   const itemClasses = cx({
-    [styles['section-item']]: !isDesktop
+    [styles.sectionItem]: !isDesktop
   });
 
   return (
