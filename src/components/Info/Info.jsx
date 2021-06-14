@@ -9,7 +9,7 @@ const Info = (props) => {
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   return (
-    <div className={cx(styles.wrapper, {[styles['wrapper--desktop']]: isDesktop})}>
+    <div className={cx(styles.wrapper, {[styles.wrapperDesktop]: isDesktop})}>
       <h2 className={styles.title} >{ title }</h2>
       <div className={styles.role}>{ role }</div>
       <div className={styles.type}>{ type }</div>

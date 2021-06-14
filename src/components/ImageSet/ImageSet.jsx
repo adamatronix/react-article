@@ -3,9 +3,6 @@ import Grid from '@react-css/grid'
 import { useMediaQuery } from 'react-responsive';
 import ImageBlock from '../ImageBlock/ImageBlock';
 import Section from '../Section/Section';
-import styles from './styles/image-set.module.scss';
-
-
 
 const Image50 = (props) => {
   const { src, placeholder, alt, caption } = props;
