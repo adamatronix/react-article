@@ -10,13 +10,13 @@ const CtaGroup = (props) => {
   const { primary, secondary } = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   return (
-    <Section className={cx(styles.wrapper, { [styles['wrapper--desktop']]: isDesktop })} contain small>
-      { primary ? <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
+    <Section className={cx(styles.wrapper, { [styles.wrapperDesktop]: isDesktop })} contain small>
+      { primary ? <div className={cx({[styles.buttonWrapper]: !isDesktop, [styles.buttonWrapperDesktop]: isDesktop })}>
         <a href={primary.href} target="_blank">
           <CtaPrimary>{ primary.label }</CtaPrimary>
         </a>
       </div> : ''}
-      { secondary ? <div className={cx({[styles['button-wrapper']]: !isDesktop, [styles['button-wrapper--desktop']]: isDesktop })}>
+      { secondary ? <div className={cx({[styles.buttonWrapper]: !isDesktop, [styles.buttonWrapperDesktop]: isDesktop })}>
         <a href={secondary.href} target="_blank">
           <CtaSecondary>{secondary.label}</CtaSecondary>
         </a>
