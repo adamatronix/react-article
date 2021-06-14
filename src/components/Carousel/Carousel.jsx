@@ -13,7 +13,7 @@ const Carousel = (props) => {
     return items.map((child,index) => {
 
       return (
-        <div className={cx(styles.item, {[styles['item--desktop']]: isDesktop})}>
+        <div className={cx(styles.item, {[styles.itemDesktop]: isDesktop})}>
           { child }
         </div>
       )
