@@ -17,8 +17,8 @@
   }
   display: flex;
 
-  &-title,
-  &-name {
+  &Title,
+  &Name {
     @include fontstack();
     @include type('body');
     width: 50%;
@@ -26,12 +26,12 @@
     padding: 0 15px;
   }
 
-  &-title {
+  &Title {
     opacity: 0.4;
     text-align: right;
   }
 
-  &-name {
+  &Name {
     text-align: left;
   }
 }
