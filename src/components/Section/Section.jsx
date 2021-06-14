@@ -7,12 +7,12 @@ const Section = (props) => {
   const { children, small, full, contain, className} = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   const sectionClasses = cx(styles.default, className, {
-    [styles['default--desktop']]: isDesktop,
+    [styles.defaultDesktop]: isDesktop,
     [styles.small]: small,
-    [styles['small--desktop']]: small && isDesktop,
-    [styles['gutter-30']]: !full && isDesktop,
-    [styles['gutter-15']]: !full && !isDesktop,
-    [styles['contain']]: contain
+    [styles.smallDesktop]: small && isDesktop,
+    [styles.gutter30]: !full && isDesktop,
+    [styles.gutter15]: !full && !isDesktop,
+    [styles.contain]: contain
   })
 
   return (
