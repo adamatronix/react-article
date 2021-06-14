@@ -11,7 +11,7 @@ const CreditLine = props => {
     const { data } = props;
 
     return(
-        <li className={styles.line}><span className={styles['line-title']}>{data.title}:</span> <span className={styles['line-name']}>{data.name}</span></li>
+        <li className={styles.line}><span className={styles.lineTitle}>{data.title}:</span> <span className={styles.lineName}>{data.name}</span></li>
     )
 }
 

@@ -13,7 +13,7 @@ const Hero = (props) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles['inner-wrapper']}>
+      <div className={styles.innerWrapper}>
         { placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
           : <div className={styles.image} style={imageStyles} ></div> }
       </div>

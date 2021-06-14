@@ -8,9 +8,9 @@ const CtaSecondary = (props) => {
   const { children } = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   return (
-    <button className={cx(styles.button, styles['button--secondary'], {[styles['button--desktop']]: isDesktop})}>
+    <button className={cx(styles.button, styles.buttonSecondary, {[styles.buttonDesktop]: isDesktop})}>
       { children }
-      <ArrowIcon className={styles['secondary-arrow']}/>
+      <ArrowIcon className={styles.secondaryArrow}/>
     </button>
   )
 }

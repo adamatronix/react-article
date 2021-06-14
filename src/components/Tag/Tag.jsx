@@ -35,7 +35,7 @@ const TagDarkOutline = (props) => {
 
   return (
     <>
-      <Tag className={cx(styles['dark-outline'], className)}>
+      <Tag className={cx(styles.darkOutline, className)}>
         { children }
       </Tag>
     </>

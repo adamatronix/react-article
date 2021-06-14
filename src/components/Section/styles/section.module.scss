@@ -1,7 +1,7 @@
 .default {
   margin: 80px 0;
 
-  &--desktop {
+  &Desktop {
     margin: 140px 0;
   }
 }
@@ -9,16 +9,16 @@
 .small {
   margin: 80px 0;
 
-  &--desktop {
+  &Desktop {
     margin: 100px 0;
   }
 }
 
-.gutter-30 {
+.gutter30 {
   padding: 0 30px;
 }
 
-.gutter-15 {
+.gutter15 {
   padding: 0 15px;
 }
 

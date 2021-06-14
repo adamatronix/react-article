@@ -15,20 +15,20 @@
   justify-content: center;
   width: 100%;
 
-  &--secondary {
+  &Secondary {
     background-color: black;
     color: white;
   }
 
-  &--desktop {
+  &Desktop {
     width: auto;
   }
 }
 
-.primary-arrow {
+.primaryArrow {
   fill: black;
 }
 
-.secondary-arrow {
+.secondaryArrow {
   fill: white;
 }
