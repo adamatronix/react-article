@@ -3,7 +3,7 @@ import cx from 'classnames/bind';
 import { useMediaQuery } from 'react-responsive';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
-import styles from './styles/carousel.module.scss';
+import * as styles from './styles/carousel.module.scss';
 
 const Carousel = (props) => {
   const { children, ...rest } = props;

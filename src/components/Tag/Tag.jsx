@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames/bind';
-import styles from './styles/tag.module.scss';
+import * as styles from './styles/tag.module.scss';
 
 const Tag = (props) => {
   const { children, className } = props;
@@ -9,7 +9,7 @@ const Tag = (props) => {
     <>
       <div className={cx(styles.wrapper, className)}>
         { children }
-      </div>      
+      </div> 
     </>
   );
 }

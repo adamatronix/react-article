@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import cx from 'classnames/bind';
-import styles from './styles/section.module.scss';
+import * as styles from './styles/section.module.scss';
 
 const Section = (props) => {
   const { children, small, full, contain, className} = props;

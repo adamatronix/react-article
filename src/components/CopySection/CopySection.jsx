@@ -4,7 +4,7 @@ import cx from 'classnames/bind';
 import Grid from '@react-css/grid';
 import Section from '../Section/Section';
 import TextBlock from '../TextBlock/TextBlock';
-import styles from './styles/copy-section.module.scss';
+import * as styles from './styles/copy-section.module.scss';
 
 const Body = (props) => {
   const { data } = props;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import cx from 'classnames/bind';
 import { ReactComponent as ArrowIcon} from './assets/Manual_MontrealArrow.svg';
-import styles from './styles/cta.module.scss';
+import * as styles from './styles/cta.module.scss';
 
 const CtaSecondary = (props) => {
   const { children } = props;
