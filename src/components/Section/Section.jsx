@@ -6,8 +6,8 @@ import styles from './styles/section.module.scss';
 const Section = (props) => {
   const { children, small, full, contain, className} = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
-  const sectionClasses = cx(styles.default, className, {
-    [styles.defaultDesktop]: isDesktop,
+  const sectionClasses = cx(styles.standard, className, {
+    [styles.standardDesktop]: isDesktop,
     [styles.small]: small,
     [styles.smallDesktop]: small && isDesktop,
     [styles.gutter30]: !full && isDesktop,
