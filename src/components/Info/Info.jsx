@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames/bind';  
 import { useMediaQuery } from 'react-responsive';
-import styles from './styles/info.module.scss';
+import * as styles from './styles/info.module.scss';
 
 const Info = (props) => {
 

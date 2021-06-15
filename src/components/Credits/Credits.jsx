@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Grid from '@react-css/grid';
 import { v4 as uuidv4 }from "uuid";
 import Section from "../Section/Section";
-import styles from './styles/credits.module.scss';
+import * as styles from './styles/credits.module.scss';
 
 
 const CreditLine = props => {

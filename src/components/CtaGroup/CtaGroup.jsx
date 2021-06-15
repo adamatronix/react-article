@@ -4,7 +4,7 @@ import cx from 'classnames/bind';
 import CtaPrimary from '../Cta/CtaPrimary';
 import CtaSecondary from '../Cta/CtaSecondary';
 import Section from '../Section/Section';
-import styles from './styles/cta-group.module.scss';
+import * as styles from './styles/cta-group.module.scss';
 
 const CtaGroup = (props) => {
   const { primary, secondary } = props;

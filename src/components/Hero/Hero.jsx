@@ -1,11 +1,9 @@
 import React from 'react';
 import { LazyBackgroundBlur } from '@manualengineering/react-lazyblur';
-import styles from './styles/hero.module.scss';
+import * as styles from './styles/hero.module.scss';
 
 const Hero = (props) => {
-
   const { src, placeholder } = props;
-
   const imageStyles = {
     background: `url(${src}) center center no-repeat`,
     backgroundSize: 'cover'

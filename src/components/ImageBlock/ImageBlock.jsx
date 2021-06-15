@@ -1,6 +1,6 @@
 import React from 'react';
 import { LazyBlurImage } from '@manualengineering/react-lazyblur';
-import styles from './styles/image-block.module.scss';
+import * as styles from './styles/image-block.module.scss';
 
 const ImageBlock = (props) => {
 
