@@ -1,10 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import cx from 'classnames/bind';
 import Grid from '@react-css/grid';
 import Section from '../Section/Section';
 import TextBlock from '../TextBlock/TextBlock';
-import * as styles from './styles/copy-section.module.scss';
 
 const Body = (props) => {
   const { data } = props;
@@ -24,27 +23,31 @@ const Body = (props) => {
 
 export { Body };
 
+const GridItem = styled(Grid.Item)`
+  &:not(:last-child) {
+    ${({ desktop }) => !desktop && `
+      margin: 0 0 20px;
+    `}
+  }
+`
+
 const CopySection = (props) => {
   const { data } = props;
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
-  const itemClasses = cx({
-    [styles.sectionItem]: !isDesktop
-  });
-
   return (
     <Section contain>
       <Grid columnGap='30px' columns="repeat(12, 1fr)">
-        <Grid.Item className={itemClasses} column={isDesktop ? '1 / span 6' : '1 / span 12'}>
+        <GridItem desktop={isDesktop} column={isDesktop ? '1 / span 6' : '1 / span 12'}>
           { data && data[0] ? <TextBlock
             content={data[0]}
           /> : '' }
-        </Grid.Item>
-        <Grid.Item className={itemClasses} column={ isDesktop ? '7 / span 6' : '1 / span 12'}>
+        </GridItem>
+        <GridItem desktop={isDesktop} column={ isDesktop ? '7 / span 6' : '1 / span 12'}>
           { data && data[1] ? <TextBlock
             content={data[1]}
           /> : '' }
-        </Grid.Item>
+        </GridItem>
       </Grid>
     </Section>
   )
