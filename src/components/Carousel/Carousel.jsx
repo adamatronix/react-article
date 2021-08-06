@@ -1,9 +1,16 @@
 import React from 'react';
 import cx from 'classnames/bind';
+import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
-import * as styles from './styles/carousel.module.scss';
+
+const Item = styled.div` 
+  margin: 0 0 0 15px;
+  ${({ desktop }) => desktop && `
+    margin: 0 0 0 30px;
+  `}
+`
 
 const Carousel = (props) => {
   const { children, ...rest } = props;
@@ -13,9 +20,9 @@ const Carousel = (props) => {
     return items.map((child,index) => {
 
       return (
-        <div className={cx(styles.item, {[styles.itemDesktop]: isDesktop})}>
+        <Item desktop={isDesktop}>
           { child }
-        </div>
+        </Item>
       )
     })
   }
