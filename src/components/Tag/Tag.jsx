@@ -1,15 +1,36 @@
 import React from 'react';
-import cx from 'classnames/bind';
-import * as styles from './styles/tag.module.scss';
+import styled from 'styled-components';
+import { fontstack } from '../../utils/fontstack';
+import { type } from '../../utils/type';
+
+const Wrapper = styled.div`
+  ${fontstack.default}
+  ${type('caption')}
+  display: inline-flex;
+  padding: 3px 8px;
+  backdrop-filter: blur(20px);
+  border-radius: 2px;
+`
+
+const DarkWrapper = styled(Wrapper)`
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+`
+
+const DarkOutlineWrapper = styled(Wrapper)`
+  color: rgba(255, 255, 255, 0.5);;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+`
 
 const Tag = (props) => {
   const { children, className } = props;
 
   return (
     <>
-      <div className={cx(styles.wrapper, className)}>
+      <Wrapper className={className}>
         { children }
-      </div> 
+      </Wrapper> 
     </>
   );
 }
@@ -21,9 +42,9 @@ const TagDark = (props) => {
 
   return (
     <>
-      <Tag className={cx(styles.dark, className)}>
+      <DarkWrapper className={className}>
         { children }
-      </Tag>
+      </DarkWrapper>
     </>
   )
 }
@@ -35,9 +56,9 @@ const TagDarkOutline = (props) => {
 
   return (
     <>
-      <Tag className={cx(styles.darkOutline, className)}>
+      <DarkOutlineWrapper className={className}>
         { children }
-      </Tag>
+      </DarkOutlineWrapper>
     </>
   )
 }

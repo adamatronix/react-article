@@ -1,37 +1,70 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import classNames from 'classnames/bind';
+import { fontstack } from '../../utils/fontstack';
+import { type } from '../../utils/type';
 import Grid from '@react-css/grid';
 import { v4 as uuidv4 }from "uuid";
 import Section from "../Section/Section";
-import * as styles from './styles/credits.module.scss';
 
+const Wrapper = styled(Section)`
+  text-align: center;
+`
+
+const List = styled.ul` 
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+`
+
+const Line = styled.li` 
+  &:not(:last-child) {
+    margin: 0 0 16px;
+  }
+  display: flex;
+`
+
+const LineText = styled.span`
+    ${fontstack.default};
+    ${type('body')}
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 15px;
+`
+
+const Title = styled(LineText)`
+  opacity: 0.4;
+  text-align: right;
+`
+const Name = styled(LineText)`
+  text-align: left;
+`
 
 const CreditLine = props => {
     const { data } = props;
 
     return(
-        <li className={styles.line}><span className={styles.lineTitle}>{data.title}:</span> <span className={styles.lineName}>{data.name}</span></li>
+        <Line><Title>{data.title}:</Title><Name>{data.name}</Name></Line>
     )
 }
 
 const Credits = props => {
     const { className, data, ...rest } = props;
     const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
-    var classesMain = classNames(styles.list, className);
 
     return (
-        <Section className={styles.wrapper} contain small>  
+        <Wrapper contain small>  
           <Grid columnGap={isDesktop ? '30px' : '15px'} columns="repeat(12, 1fr)">
             <Grid.Item column={ isDesktop ? '4 / span 6' : '2 / span 10'}>
-              <ul className={classesMain} {...rest}>
+              <List className={className} {...rest}>
                   { data.map( line => {
                       return <CreditLine data={line} key={uuidv4()} />
                   })}
-              </ul>
+              </List>
               </Grid.Item>
             </Grid>
-        </Section>
+        </Wrapper>
     )
 }
 

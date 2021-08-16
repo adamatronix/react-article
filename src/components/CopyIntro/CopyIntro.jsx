@@ -1,11 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import Grid from '@react-css/grid';
 import { useMediaQuery } from 'react-responsive';
 import Section from '../Section/Section';
 import Info from '../Info/Info';
 import TextBlock from '../TextBlock/TextBlock';
-import CtaPrimary  from '../Cta/CtaPrimary';
-import * as styles from './styles/copy-intro.module.scss';
+import { Primary } from '../Cta/Cta';
+import { fontstack } from '../../utils/fontstack';
+
+const Wrapper = styled(Section)`
+  ${fontstack.default}
+  line-height: 1.33;
+`
 
 const CopyIntro = (props) => {
 
@@ -13,7 +19,7 @@ const CopyIntro = (props) => {
   const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   return (
-    <Section className={styles.wrapper} contain>
+    <Wrapper contain>
       <Grid columnGap='30px' columns="repeat(12, 1fr)">
         <Grid.Item column={ isDesktop ? '1 / span 6' : '1 / span 12'}>
           { info ? <Info 
@@ -24,9 +30,9 @@ const CopyIntro = (props) => {
           /> : ''}
           { cta && isDesktop ? 
             <a href={cta.href} target="_blank">
-              <CtaPrimary>
+              <Primary>
                 { cta.label }
-              </CtaPrimary>
+              </Primary>
             </a>
              : ''
           }
@@ -37,7 +43,7 @@ const CopyIntro = (props) => {
           /> : ''}
         </Grid.Item>
       </Grid>
-    </Section>
+    </Wrapper>
   );
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@manualengineering/react-article",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "dist/index.js",
   "private": false,
   "files": [
@@ -23,6 +23,7 @@
     "react-placeholder-image": "^0.1.8",
     "react-responsive": "^8.2.0",
     "react-test-renderer": "^17.0.2",
+    "styled-components": "^5.3.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"
   },

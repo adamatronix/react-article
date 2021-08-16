@@ -1,27 +1,48 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
-import cx from 'classnames/bind';
-import CtaPrimary from '../Cta/CtaPrimary';
-import CtaSecondary from '../Cta/CtaSecondary';
+import styled from 'styled-components';
+import { media } from '../../utils/mediaQuery';
+import { Primary, Secondary } from '../Cta/Cta';
 import Section from '../Section/Section';
-import * as styles from './styles/cta-group.module.scss';
+
+const Wrapper = styled(Section)`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  ${media.small`
+    flex-direction: row;
+  `}
+`
+
+const ButtonWrapper = styled.div`
+  @media screen and (max-width: 768px) {
+    &:not(:last-child) {
+      margin: 0 0 15px;
+    }
+  }
+  width: 80%;
+  ${media.small`
+    margin: 0 15px;
+    width: auto;
+  `}
+`
 
 const CtaGroup = (props) => {
   const { primary, secondary } = props;
-  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   return (
-    <Section className={cx(styles.wrapper, { [styles.wrapperDesktop]: isDesktop })} contain small>
-      { primary ? <div className={cx({[styles.buttonWrapper]: !isDesktop, [styles.buttonWrapperDesktop]: isDesktop })}>
+    <Wrapper contain small>
+      { primary ? <ButtonWrapper>
         <a href={primary.href} target="_blank">
-          <CtaPrimary>{ primary.label }</CtaPrimary>
+          <Primary>{ primary.label }</Primary>
         </a>
-      </div> : ''}
-      { secondary ? <div className={cx({[styles.buttonWrapper]: !isDesktop, [styles.buttonWrapperDesktop]: isDesktop })}>
+      </ButtonWrapper> : ''}
+      { secondary ? <ButtonWrapper>
         <a href={secondary.href} target="_blank">
-          <CtaSecondary>{secondary.label}</CtaSecondary>
+          <Secondary>{secondary.label}</Secondary>
         </a>
-      </div> : ''}
-    </Section>
+      </ButtonWrapper> : ''}
+    </Wrapper>
   )
 }
 
