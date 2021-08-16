@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import Section from '../Section/Section';
 import Info from '../Info/Info';
 import TextBlock from '../TextBlock/TextBlock';
-import CtaPrimary  from '../Cta/CtaPrimary';
+import { Primary } from '../Cta/Cta';
 import { fontstack } from '../../utils/fontstack';
 
 const Wrapper = styled(Section)`
@@ -30,9 +30,9 @@ const CopyIntro = (props) => {
           /> : ''}
           { cta && isDesktop ? 
             <a href={cta.href} target="_blank">
-              <CtaPrimary>
+              <Primary>
                 { cta.label }
-              </CtaPrimary>
+              </Primary>
             </a>
              : ''
           }

@@ -1,12 +1,23 @@
 import React from 'react';
-import classNames from 'classnames/bind';
-import * as styles from "./styles/htmlparser.module.scss";
+import styled from 'styled-components';
+import { fontstack } from '../../utils/fontstack';
+import { type } from '../../utils/type';
+
+const PTag = styled.p`
+  ${fontstack.default}
+  ${type('subtitle')}
+
+  margin: 0 0 20px; 
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+`
 
 const Paragraph = props => {
     const { children } = props;
-    const classesMain = classNames(styles.p);
     return (
-        <p className={classesMain} {...props}>{children}</p>
+        <PTag {...props}>{children}</PTag>
     )
 }
 

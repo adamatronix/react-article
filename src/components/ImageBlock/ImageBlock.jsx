@@ -1,15 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
+import { fontstack } from '../../utils/fontstack';
+import { type } from '../../utils/type';
 import { LazyBlurImage } from '@manualengineering/react-lazyblur';
-import * as styles from './styles/image-block.module.scss';
+
+const LazyImage = styled(LazyBlurImage)`
+  pointer-events: none;
+`
+
+const Image = styled.img`
+  display: block;
+  position: relative;
+  width: 100%;
+`
+
+const Box = styled.div`
+  display: block;
+  width: 100%; 
+  padding-bottom: 100%;
+  background-color: #C4C4C4;
+`
+
+const Caption = styled.div`
+  ${fontstack.default}
+  ${type('caption')}
+  margin: 10px 0;
+`
 
 const ImageBlock = (props) => {
 
   const { placeholder, src, alt, caption, style, className } = props;
   return (
     <div style={style} className={className}>
-      { placeholder && src ? <LazyBlurImage className={styles.lazyimage} placeholder={placeholder} src={src} alt={alt}/> : src ?
-      <img className={styles.image} src={src} alt={alt} /> : <div className={styles.box}></div> }
-      { caption ? <div className={styles.caption}>{caption}</div> : ''}
+      { placeholder && src ? <LazyImage placeholder={placeholder} src={src} alt={alt}/> : src ?
+      <Image src={src} alt={alt} /> : <Box /> }
+      { caption ? <Caption>{caption}</Caption> : ''}
     </div>
   )
 }

@@ -1,28 +1,27 @@
 import React from 'react';
-import CtaPrimary from './CtaPrimary';
-import CtaSecondary from './CtaSecondary';
+import { Primary, Secondary } from './Cta';
 
 export default {
   title: 'Cta',
 };
 
 
-export const Primary = () => {
+export const PrimaryBtn = () => {
   return (
     <>
-      <CtaPrimary>
+      <Primary>
         Github
-      </CtaPrimary>
+      </Primary>
     </>
   );
 }
 
-export const Secondary = () => {
+export const SecondaryBtn = () => {
   return (
     <>
-      <CtaSecondary>
+      <Secondary>
       View Live
-      </CtaSecondary>
+      </Secondary>
     </>
   );
 }

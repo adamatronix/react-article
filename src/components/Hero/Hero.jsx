@@ -1,21 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
 import { LazyBackgroundBlur } from '@manualengineering/react-lazyblur';
-import * as styles from './styles/hero.module.scss';
+
+const Wrapper = styled.div`
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100vh;
+`
+
+const WrapperInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+`
+
+const Image = styled.div`
+  background: url(${props => props.src}) center center no-repeat;
+  background-size: 'cover';
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+`
 
 const Hero = (props) => {
   const { src, placeholder } = props;
-  const imageStyles = {
-    background: `url(${src}) center center no-repeat`,
-    backgroundSize: 'cover'
-  }
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.innerWrapper}>
+    <Wrapper>
+      <WrapperInner>
         { placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
-          : <div className={styles.image} style={imageStyles} ></div> }
-      </div>
-    </div>
+          : <Image src={src} /> }
+      </WrapperInner>
+    </Wrapper>
   );
 }
 
