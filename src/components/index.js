@@ -1,6 +1,6 @@
 import Carousel from './Carousel/Carousel';
 import CopyIntro from './CopyIntro/CopyIntro';
-import  { Body as CopyBody, CopySection } from './CopySection/CopySection';
+import  { CopyBody, CopySection } from './CopySection/CopySection';
 import Credits from './Credits/Credits';
 import CtaGroup from './CtaGroup/CtaGroup';
 import Hero from './Hero/Hero';
