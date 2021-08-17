@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
+import { media } from '../utils/mediaQuery';
 import { fontstack } from '../utils/fontstack';
 import { type } from '../utils/type';
-import Grid from '@react-css/grid';
 import { v4 as uuidv4 }from "uuid";
 import Section from "../Section/Section";
 
@@ -41,6 +40,24 @@ const Name = styled(LineText)`
   text-align: left;
 `
 
+const Grid = styled.div` 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 15px;
+
+  ${media.small`
+    grid-column-gap: 30px;
+  `}
+`
+
+const GridItem = styled.div` 
+  grid-column: 2 / span 10;
+
+  ${media.small`
+    grid-column: 4 / span 6;
+  `}
+`
+
 const CreditLine = props => {
     const { data } = props;
 
@@ -51,18 +68,16 @@ const CreditLine = props => {
 
 const Credits = props => {
     const { className, data, ...rest } = props;
-    const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
-
     return (
         <Wrapper contain small>  
-          <Grid columnGap={isDesktop ? '30px' : '15px'} columns="repeat(12, 1fr)">
-            <Grid.Item column={ isDesktop ? '4 / span 6' : '2 / span 10'}>
+          <Grid>
+            <GridItem>
               <List className={className} {...rest}>
                   { data.map( line => {
                       return <CreditLine data={line} key={uuidv4()} />
                   })}
               </List>
-              </Grid.Item>
+              </GridItem>
             </Grid>
         </Wrapper>
     )
