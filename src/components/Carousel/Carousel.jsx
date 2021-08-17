@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
+import useWindowSize from '../utils/useWindowSize';
 import { media } from '../utils/mediaQuery';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
@@ -15,7 +15,7 @@ const Item = styled.div`
 
 const Carousel = (props) => {
   const { children, ...rest } = props;
-  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
+  const [width, height] = useWindowSize();
 
   const getItems = (items) => {
     return items.map((child,index) => {
@@ -27,11 +27,12 @@ const Carousel = (props) => {
     })
   }
 
+  console.log(width);
   const allItems = getItems(children);
 
   return (
     <Section full>
-      <SlippinCarousel itemSize={ isDesktop ? '55%' : '90%'} {...rest}>
+      <SlippinCarousel itemSize={ width > 768 ? '55%' : '90%'} {...rest}>
         {allItems ? allItems : ''}
       </SlippinCarousel>
     </Section>
