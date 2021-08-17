@@ -6,7 +6,7 @@ import Section from '../Section/Section';
 import Info from '../Info/Info';
 import TextBlock from '../TextBlock/TextBlock';
 import { Primary } from '../Cta/Cta';
-import { fontstack } from '../../utils/fontstack';
+import { fontstack } from '../utils/fontstack';
 
 const Wrapper = styled(Section)`
   ${fontstack.default}

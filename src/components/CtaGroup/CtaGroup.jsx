@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media } from '../../utils/mediaQuery';
+import { media } from '../utils/mediaQuery';
 import { Primary, Secondary } from '../Cta/Cta';
 import Section from '../Section/Section';
 

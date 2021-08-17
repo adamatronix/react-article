@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fontstack } from '../../utils/fontstack';
-import { type } from '../../utils/type';
-import { media } from '../../utils/mediaQuery';
+import { fontstack } from '../utils/fontstack';
+import { type } from '../utils/type';
+import { media } from '../utils/mediaQuery';
 import { ReactComponent as ArrowIcon } from './assets/Manual_MontrealArrow.svg';
 
 const Button = styled.button`
