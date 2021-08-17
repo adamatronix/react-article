@@ -1,53 +1,79 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
-import Grid from '@react-css/grid';
+import { media } from '../utils/mediaQuery';
 import Section from '../Section/Section';
 import TextBlock from '../TextBlock/TextBlock';
 
-const Body = (props) => {
+const Grid = styled.div` 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+`
+
+const GridBodyItem = styled.div` 
+  grid-column: 1 / span 12;
+
+  ${media.small`
+    grid-column: 4 / span 6;
+  `}
+`
+
+const CopyBody = (props) => {
   const { data } = props;
-  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
   return (
     <Section contain>
-      <Grid columnGap='30px' columns="repeat(12, 1fr)">
-        <Grid.Item column={isDesktop ? '4 / span 6' : '1 / span 12'}>
+      <Grid>
+        <GridBodyItem>
           <TextBlock
             content={data}
           />
-        </Grid.Item>
+        </GridBodyItem>
       </Grid>
     </Section>
   )
 }
 
-export { Body };
+export { CopyBody };
 
-const GridItem = styled(Grid.Item)`
+const GridItem = styled.div`
   &:not(:last-child) {
-    ${({ desktop }) => !desktop && `
-      margin: 0 0 20px;
+    margin: 0 0 20px;
+    ${media.small`
+      margin: 0;
     `}
   }
 `
 
+const GridLeftItem = styled(GridItem)`
+  grid-column: 1 / span 12;
+  ${media.small`
+    grid-column: 1 / span 6;
+  `}
+`
+
+const GridRightItem = styled(GridItem)`
+  grid-column: 1 / span 12;
+  ${media.small`
+    grid-column: 7 / span 6;
+  `}
+`
+
 const CopySection = (props) => {
   const { data } = props;
-  const isDesktop = useMediaQuery({ query: '(min-width: 769px)' });
 
   return (
     <Section contain>
-      <Grid columnGap='30px' columns="repeat(12, 1fr)">
-        <GridItem desktop={isDesktop} column={isDesktop ? '1 / span 6' : '1 / span 12'}>
+      <Grid>
+        <GridLeftItem>
           { data && data[0] ? <TextBlock
             content={data[0]}
           /> : '' }
-        </GridItem>
-        <GridItem desktop={isDesktop} column={ isDesktop ? '7 / span 6' : '1 / span 12'}>
+        </GridLeftItem>
+        <GridRightItem>
           { data && data[1] ? <TextBlock
             content={data[1]}
           /> : '' }
-        </GridItem>
+        </GridRightItem>
       </Grid>
     </Section>
   )
