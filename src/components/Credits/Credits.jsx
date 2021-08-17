@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import { fontstack } from '../../utils/fontstack';
-import { type } from '../../utils/type';
+import { fontstack } from '../utils/fontstack';
+import { type } from '../utils/type';
 import Grid from '@react-css/grid';
 import { v4 as uuidv4 }from "uuid";
 import Section from "../Section/Section";

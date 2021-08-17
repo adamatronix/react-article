@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { fontstack } from '../../utils/fontstack';
-import { type } from '../../utils/type';
-import { media } from '../../utils/mediaQuery';
+import { fontstack } from '../utils/fontstack';
+import { type } from '../utils/type';
+import { media } from '../utils/mediaQuery';
 
 const Wrapper = styled.div`
   margin: 0 0 80px;
