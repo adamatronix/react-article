@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fontstack } from '../utils/fontstack';
-import { type } from '../utils/type';
+import { fontstack } from 'utils/fontstack';
+import { type } from 'utils/type';
 import { LazyBlurImage } from '@manualengineering/react-lazyblur';
 
 const LazyImage = styled(LazyBlurImage)`

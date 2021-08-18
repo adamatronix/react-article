@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media } from '../utils/mediaQuery';
-import ImageBlock from '../ImageBlock/ImageBlock';
-import Section from '../Section/Section';
+import { media } from 'utils/mediaQuery';
+import ImageBlock from 'components/ImageBlock/ImageBlock';
+import Section from 'components/Section/Section';
 
 const Grid = styled.div` 
   display: grid;
