@@ -4,7 +4,7 @@ import { media } from 'utils/mediaQuery';
 import { fontstack } from 'utils/fontstack';
 import { type } from 'utils/type';
 import { v4 as uuidv4 }from "uuid";
-import Section from "components/Section/Section";
+import Section from "../Section/Section";
 
 const Wrapper = styled(Section)`
   text-align: center;

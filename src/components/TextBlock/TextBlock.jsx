@@ -1,5 +1,5 @@
 import React from 'react';
-import HtmlParser from 'components/HtmlParser/HtmlParser';
+import HtmlParser from '../HtmlParser/HtmlParser';
 
 const TextBlock = (props) => {
 

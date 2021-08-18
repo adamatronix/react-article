@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 }from "uuid";
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { getStyleObjectFromString } from './HtmlParserHelper';
-import InlineAnchor from "components/InlineAnchor/InlineAnchor";
+import InlineAnchor from "../InlineAnchor/InlineAnchor";
 import { Paragraph, Strong, Em } from "./HtmlParserTags";
 
 const HtmlParserTransform = function(node, index) {

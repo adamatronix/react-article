@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/mediaQuery';
-import Section from 'components/Section/Section';
-import Info from 'components/Info/Info';
-import TextBlock from 'components/TextBlock/TextBlock';
-import { Primary } from 'components/Cta/Cta';
+import Section from '../Section/Section';
+import Info from '../Info/Info';
+import TextBlock from '../TextBlock/TextBlock';
+import { Primary } from '../Cta/Cta';
 import { fontstack } from 'utils/fontstack';
 
 const Wrapper = styled(Section)`
