@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { media } from '../utils/mediaQuery';
+import { media } from 'utils/mediaQuery';
 
 const gutterStyle = css` 
   padding: 0 15px;
