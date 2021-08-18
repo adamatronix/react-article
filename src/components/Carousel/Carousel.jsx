@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import useWindowSize from '../utils/useWindowSize';
 import { media } from 'utils/mediaQuery';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
-import Section from 'components/Section/Section';
+import Section from '../Section/Section';
 
 const Item = styled.div` 
   margin: 0 0 0 15px;
