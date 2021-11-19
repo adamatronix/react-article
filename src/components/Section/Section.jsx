@@ -16,16 +16,20 @@ const containStyle = css`
 `
 
 const smallStyle = css`
-  margin: 80px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
   ${media.small`
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
   `}
 `
 
 const standardStyle = css`
-  margin: 80px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
   ${media.small`
-    margin: 140px 0;
+    margin-top: 140px;
+    margin-bottom: 140px;
   `}
 `
 
