@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Caption from '../Caption/Caption';
 import { fontstack } from 'utils/fontstack';
 import { type } from 'utils/type';
 import { LazyBlurImage } from '@manualengineering/react-lazyblur';
@@ -20,13 +21,6 @@ const Box = styled.div`
   padding-bottom: 100%;
   background-color: #C4C4C4;
 `
-
-const Caption = styled.div`
-  ${fontstack.default}
-  ${type('caption')}
-  margin: 10px 0;
-`
-
 const ImageBlock = (props) => {
 
   const { placeholder, src, alt, caption, style, className } = props;
