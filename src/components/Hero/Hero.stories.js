@@ -22,3 +22,13 @@ export const Default = () => {
   );
 
 }
+
+export const IFrame = () => {
+  
+  return (
+    <>
+      <Hero iframe="https://adamatronix.github.io/exploring-the-warp-of-canadian-psychedelia-vol1/"/>
+    </>
+  );
+
+}

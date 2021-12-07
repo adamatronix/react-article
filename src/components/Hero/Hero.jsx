@@ -26,14 +26,22 @@ const Image = styled.div`
   display: block;
 `
 
+const IFrame = styled.iframe`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+`
+
 const Hero = (props) => {
-  const { src, placeholder } = props;
+  const { src, placeholder, iframe } = props;
 
   return (
     <Wrapper>
       <WrapperInner>
-        { placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
-          : <Image src={src} /> }
+        { src && placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
+          : src ? <Image src={src} /> : iframe ? <IFrame title="iframe" src={iframe} /> : null}
       </WrapperInner>
     </Wrapper>
   );
