@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LazyBackgroundBlur } from '@manualengineering/react-lazyblur';
+import IFrame from '../IFrame/IFrame';
 
 const Wrapper = styled.div`
   box-sizing: border-box;
@@ -26,14 +27,15 @@ const Image = styled.div`
   display: block;
 `
 
+
 const Hero = (props) => {
-  const { src, placeholder } = props;
+  const { src, placeholder, iframe } = props;
 
   return (
     <Wrapper>
       <WrapperInner>
-        { placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
-          : <Image src={src} /> }
+        { src && placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
+          : src ? <Image src={src} /> : iframe ? <IFrame title="iframe" src={iframe} /> : null}
       </WrapperInner>
     </Wrapper>
   );
