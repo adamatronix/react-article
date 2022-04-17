@@ -1,10 +1,9 @@
 @font-face {
   font-family: 'Neue Montreal';
   font-style:  normal;
-  font-weight: 400;
+  font-variation-settings: "wght" 450;
   font-display: swap;
-  src: url("./NeueMontreal/neuemontreal-regular-webfont.woff2") format("woff2"),
-       url("./NeueMontreal/neuemontreal-regular-webfont.woff") format("woff");
+  src: url("./NeueMontreal/PPNeueMontreal-Variable.ttf") format("truetype");
 }
 
 @font-face {
