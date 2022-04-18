@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/mediaQuery';
 import ImageBlock from '../ImageBlock/ImageBlock';
-import Embed from 'components/Embed/Embed';
+import Embed from '../Embed/Embed';
 import Section from '../Section/Section';
 
 const Grid = styled.div` 
