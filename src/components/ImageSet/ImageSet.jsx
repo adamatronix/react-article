@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/mediaQuery';
 import ImageBlock from '../ImageBlock/ImageBlock';
+import Embed from 'components/Embed/Embed';
 import Section from '../Section/Section';
 
 const Grid = styled.div` 
@@ -23,13 +24,13 @@ const GridWideItem = styled.div`
 `
 
 const Image50 = (props) => {
-  const { src, placeholder, alt, caption } = props;
+  const { src, placeholder, alt, caption, embed } = props;
 
   return (
     <Section contain>
       <Grid>
         <GridTightItem>
-          <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/>
+          { src ? <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/> : embed ? <Embed embed={embed} /> : null }
         </GridTightItem>
       </Grid>
     </Section>
@@ -37,12 +38,12 @@ const Image50 = (props) => {
 }
 
 const Image90 = (props) => {
-  const { src, placeholder, alt, caption } = props;
+  const { src, placeholder, alt, caption, embed } = props;
   return (
     <Section>
       <Grid>
         <GridWideItem>
-          <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/>
+        { src ? <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/> : embed ? <Embed embed={embed} /> : null }
         </GridWideItem>
       </Grid>
     </Section>
@@ -50,12 +51,12 @@ const Image90 = (props) => {
 }
 
 const Image100 = (props) => {
-  const { src, placeholder, alt, caption } = props;
+  const { src, placeholder, alt, caption, embed } = props;
   return (
     <Section full>
       <Grid>
         <GridWideItem>
-          <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/>
+        { src ? <ImageBlock src={src} placeholder={placeholder} caption={caption} alt={alt}/> : embed ? <Embed embed={embed} /> : null }
         </GridWideItem>
       </Grid>
     </Section>

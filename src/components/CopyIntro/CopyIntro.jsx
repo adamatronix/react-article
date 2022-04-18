@@ -15,7 +15,7 @@ const Wrapper = styled(Section)`
 const Cta = styled.a`
   display: none;
   ${media.small`
-    display: block;
+    display: inline-block;
   `}
 `
 

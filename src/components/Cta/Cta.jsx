@@ -20,6 +20,12 @@ const Button = styled.button`
   justify-content: center;
   width: 100%;
 
+  &:after {
+    content:' ↗';
+    display: block;
+    white-space: pre;
+  }
+
   ${media.small`
     width: auto;
   `}
@@ -44,7 +50,6 @@ const Primary = (props) => {
   return (
     <Button>
       { children }
-      <PrimaryArrow />
     </Button>
   )
 }
@@ -56,7 +61,6 @@ const Secondary = (props) => {
   return (
     <SecondaryButton>
       { children }
-      <SecondaryArrow/>
     </SecondaryButton>
   )
 }
