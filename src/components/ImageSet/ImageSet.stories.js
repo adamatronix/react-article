@@ -44,10 +44,18 @@ export const Imagehundred = () => {
 }
 
 export const ImagehundredEmbed = () => {
-  const embedString = '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/100870408?h=e9417b2dba&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479/embed" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>';
+  const oEmbed= {
+    "html": "<iframe src=\"https://player.vimeo.com/video/100870408?h=e9417b2dba&amp;app_id=122963\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen title=\"Hong Kong/Seoul Sojourn\"></iframe>",
+    "width": 640,
+    "height": 360,
+    "thumbnail_url": "https://i.vimeocdn.com/video/482502358-96fb9870bb89842b307711d5fe3a494e16218ea11cdaba7b8bde3e4cf14f105b-d_640",
+    "thumbnail_width": 640,
+    "thumbnail_height": 360,
+    "embed_url": "https://vimeo.com/100870408"
+  }
   return (
     <>
-      <Image100 embed={embedString}/>
+      <Image100 embed={oEmbed}/>
     </>
   );
 }
