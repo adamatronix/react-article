@@ -4,6 +4,37 @@ import useWindowSize from '../utils/useWindowSize';
 import { media } from 'utils/mediaQuery';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
+import { fontstack } from 'utils/fontstack';
+
+const ClickComponent = styled.div`
+  ${fontstack.default}
+  font-size: 24px;
+  line-height: 32px;
+`
+
+const Carousel = (props) => {
+  const { children, ...rest } = props;
+  const [width, height] = useWindowSize();
+
+  return (
+    <>
+    {width ?
+      <Section full>
+        <SlippinCarousel 
+          itemSize={ width > 768 ? '55%' : '90%'}  
+          clickable={width > 768 ? true : false}
+          clickableNextLabel={<ClickComponent>(Next, →)</ClickComponent>} 
+          clickablePrevLabel={<ClickComponent>(↙, Previous)</ClickComponent>} {...rest}>
+          {children}
+        </SlippinCarousel>
+      </Section>
+     : null}
+  </>
+  )
+}
+
+export default Carousel;
+
 
 const Item = styled.div` 
   margin: 0 0 0 15px;
@@ -13,30 +44,13 @@ const Item = styled.div`
   `}
 `
 
-const Carousel = (props) => {
-  const { children, ...rest } = props;
-  const [width, height] = useWindowSize();
-
-  const getItems = (items) => {
-    return items.map((child,index) => {
-      return (
-        <Item>
-          { child }
-        </Item>
-      )
-    })
-  }
-
-  console.log(width);
-  const allItems = getItems(children);
+const CarouselItem = ({children}) => {
 
   return (
-    <Section full>
-      <SlippinCarousel itemSize={ width > 768 ? '55%' : '90%'} {...rest}>
-        {allItems ? allItems : ''}
-      </SlippinCarousel>
-    </Section>
+    <Item>
+      {children}
+    </Item>
   )
 }
 
-export default Carousel;
+export { CarouselItem }
