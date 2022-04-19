@@ -29,10 +29,10 @@ const Image = styled.div`
 
 
 const Hero = (props) => {
-  const { src, placeholder, iframe } = props;
+  const { src, placeholder, iframe, ...rest } = props;
 
   return (
-    <Wrapper>
+    <Wrapper {...rest}>
       <WrapperInner>
         { src && placeholder ? <LazyBackgroundBlur src={src} placeholder={placeholder} />
           : src ? <Image src={src} /> : iframe ? <IFrame title="iframe" src={iframe} /> : null}
