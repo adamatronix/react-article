@@ -26,8 +26,6 @@ const Carousel = (props) => {
       )
     })
   }
-
-  console.log(width);
   const allItems = getItems(children);
 
   return (
