@@ -5,14 +5,6 @@ import { media } from 'utils/mediaQuery';
 import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
 
-const Item = styled.div` 
-  margin: 0 0 0 15px;
-
-  ${media.small`
-    margin: 0 0 0 30px;
-  `}
-`
-
 const Carousel = (props) => {
   const { children, ...rest } = props;
   const [width, height] = useWindowSize();
@@ -26,15 +18,34 @@ const Carousel = (props) => {
       )
     })
   }
-  const allItems = getItems(children);
 
   return (
     <Section full>
       <SlippinCarousel itemSize={ width > 768 ? '55%' : '90%'} {...rest}>
-        {allItems ? allItems : ''}
+        {children}
       </SlippinCarousel>
     </Section>
   )
 }
 
 export default Carousel;
+
+
+const Item = styled.div` 
+  margin: 0 0 0 15px;
+
+  ${media.small`
+    margin: 0 0 0 30px;
+  `}
+`
+
+const CarouselItem = ({children}) => {
+
+  return (
+    <Item>
+      {children}
+    </Item>
+  )
+}
+
+export { CarouselItem }
