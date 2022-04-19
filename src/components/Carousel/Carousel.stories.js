@@ -23,7 +23,7 @@ export const Default = () => {
         { imageArray.map((item, index) => {
           const image = generatePhotoPlaceholderURL(300, 300);
             return (
-              <SlippingCarouseItem>
+              <SlippingCarouseItem theme="dark">
                 <CarouselItem>
                   <div style={placeholder}>
                     <img src={image}  style={{pointerEvents: 'none', width: '100%', display: 'block'}} />
