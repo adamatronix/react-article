@@ -30,7 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "clean": "rimraf dist",
-    "compile": "npm run clean && env-cmd -f .env babel src/components --out-dir dist --copy-files --ignore stories.js",
+    "compile": "npm run clean && env-cmd -f .env babel src/components --out-dir dist --copy-files --ignore **/*.stories.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
