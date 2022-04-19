@@ -1,4 +1,4 @@
-import Carousel from './Carousel/Carousel';
+import Carousel, { CarouselItem } from './Carousel/Carousel';
 import CopyIntro from './CopyIntro/CopyIntro';
 import  { CopyBody, CopySection } from './CopySection/CopySection';
 import Credits from './Credits/Credits';
@@ -13,6 +13,7 @@ import TextBlock from './TextBlock/TextBlock';
 
 export { 
     Carousel,
+    CarouselItem,
     CopyIntro,
     CopyBody,
     CopySection,

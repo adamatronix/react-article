@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useWindowSize from '../utils/useWindowSize';
 import { media } from 'utils/mediaQuery';
-import { SlippinCarousel } from '@manualengineering/react-slippin-carousel';
+import { SlippinCarousel, SlippingCarouseItem } from '@manualengineering/react-slippin-carousel';
 import Section from '../Section/Section';
 import { fontstack } from 'utils/fontstack';
 
@@ -44,12 +44,14 @@ const Item = styled.div`
   `}
 `
 
-const CarouselItem = ({children}) => {
+const CarouselItem = ({children, ...rest}) => {
 
   return (
-    <Item>
-      {children}
-    </Item>
+    <SlippingCarouseItem {...rest}>
+      <Item>
+        {children}
+      </Item>
+    </SlippingCarouseItem>
   )
 }
 
