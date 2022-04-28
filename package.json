@@ -1,6 +1,6 @@
 {
   "name": "@manualengineering/react-article",
-  "version": "0.3.9",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "private": false,
   "files": [
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@manualengineering/react-lazyblur": "^0.2.2",
-    "@manualengineering/react-slippin-carousel": "^0.2.0",
+    "@manualengineering/react-slippin-carousel": "^0.2.1",
     "@react-css/grid": "^1.4.3",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",

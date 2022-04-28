@@ -8,7 +8,11 @@ import Section from '../Section/Section';
 const Grid = styled.div` 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
+  grid-column-gap: 9px;
+  grid-row-gap: 20px;
+  ${media.small`
+    grid-column-gap: 30px;
+  `}
 `
 
 const GridTightItem = styled.div`
@@ -22,6 +26,39 @@ const GridTightItem = styled.div`
 const GridWideItem = styled.div`
   grid-column: 1 / span 12;
 `
+
+const GridSixteen = styled.div` 
+  grid-column: span 6;
+  ${media.small`
+    grid-column: ${props => props.span};
+  `}
+`
+
+const Image16 = (props) => {
+  const { items } = props;
+  const total = items.length;
+  const firstColumn = {
+    5: '2 / span 2',
+    4: '3 / span 2',
+    3: '7 / span 2',
+    2: '7 / span 2',
+    1: '7 / span 2'
+  }
+
+  return (
+    <Section contain>
+      <Grid>
+        { items ? items.map((item, index) => {
+          return (
+            <GridSixteen span={index === 0 && total < 6 ? firstColumn[total] : 'span 2'}>
+              <ImageBlock src={item.src} alt={item.alt}/>
+            </GridSixteen>
+          )
+        }) : null}
+      </Grid>
+    </Section>
+  )
+}
 
 const Image50 = (props) => {
   const { src, placeholder, alt, caption, embed } = props;
@@ -64,6 +101,7 @@ const Image100 = (props) => {
 }
 
 export {
+  Image16,
   Image50,
   Image90,
   Image100

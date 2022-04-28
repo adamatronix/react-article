@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image50, Image90, Image100 } from './ImageSet';
+import { Image16, Image50, Image90, Image100 } from './ImageSet';
 import { generatePhotoPlaceholderURL } from 'react-placeholder-image';
 import useWindowSize from 'components/utils/useWindowSize';
 
@@ -9,6 +9,43 @@ export default {
     layout:'fullscreen',
   }, 
 };
+
+export const ImageSixteen = () => {
+  const image = generatePhotoPlaceholderURL(400, 400);
+
+  const items = [
+    {
+      src: image, 
+      alt: ''
+    },
+    {
+      src: image, 
+      alt: ''
+    },
+    {
+      src: image, 
+      alt: ''
+    },
+    {
+      src: image, 
+      alt: ''
+    },
+    {
+      src: image, 
+      alt: ''
+    },
+    {
+      src: image, 
+      alt: ''
+    }
+  ]
+
+  return (
+    <>
+      <Image16 items={items}/>
+    </>
+  );
+}
 
 export const ImageFifty = () => {
   const image = generatePhotoPlaceholderURL(500, 500);
