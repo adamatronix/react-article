@@ -6,7 +6,7 @@ import CtaGroup from './CtaGroup/CtaGroup';
 import Hero from './Hero/Hero';
 import HtmlParser from './HtmlParser/HtmlParser';
 import ImageBlock from './ImageBlock/ImageBlock';
-import { Image50, Image90, Image100 } from './ImageSet/ImageSet';
+import { Image16, Image50, Image90, Image100 } from './ImageSet/ImageSet';
 import Embed from './Embed/Embed';
 import Section from './Section/Section';
 import TextBlock from './TextBlock/TextBlock';
@@ -22,6 +22,7 @@ export {
     Hero,
     HtmlParser,
     ImageBlock,
+    Image16,
     Image50,
     Image90,
     Image100,
