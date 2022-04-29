@@ -62,7 +62,7 @@ const CreditLine = props => {
     const { data } = props;
 
     return(
-        <Line><Title>{data.title}:</Title><Name>{data.name}</Name></Line>
+        <Line><Title>{data.title}</Title><Name>{data.name}</Name></Line>
     )
 }
 
